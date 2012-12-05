@@ -5,12 +5,15 @@ This library will help with the calculation of Holiday dates for
 United States holidays.
 
 ## Installation
-Copy the files from the package to the corresponding folders in your 
-application folder.
+Include the `Holidays.class.php` file in your PHP script:
 
+    require_once('Holidays.class.php');
+    
 ### Configuration
-Configuration settings can be changed in the Holidays.php file in the
-config folder.
+The class takes 2 optional parameters: year and extra holidays. If omitted, the library will use the current year with no extra holidays.
+
+    //use current year with no extra holidays
+    $holidays = new Holidays();
 
 #### Options
 * Observance: Uses observed holiday date if holiday falls on the
@@ -50,11 +53,14 @@ All types will be combined in the extra array
 
 * Example Extra Array
 
-        $config['extra'] = array(
+        $extra = array(
             "New Year's Eve"          => array(12, 31),
             'Fri. after Thanksgiving' => array(+5, 4, 11, 4),
             'Fri. before Memorial'    => array(-5, 1, 5, 5)
         );
+        
+        //create object for current year with extra holidays
+        $holidays = new Holidays(null, $extra);
 
 ## Default Holidays
 * New Year's Day   - 1/1
