@@ -67,3 +67,7 @@ All types will be combined in the extra array
 * Labor            - 1st Mon of Sep
 * Columbus         - 2nd Mon of Oct 
 * Thanksgiving     - 4th Thurs of Nov
+
+## Included Examples
+* `examples/datepicker/`: Using the holiday library to exclude holidays from the jQuery UI Datepicker
+* `examples/get_year/`: Get holiday dates for a given year. Displays both actual dates and observances. 
